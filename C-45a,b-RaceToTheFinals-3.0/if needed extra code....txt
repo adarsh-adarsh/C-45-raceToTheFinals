@@ -1,0 +1,25 @@
+if(allTeams !== undefined)
+    {
+      background("#c68767");
+      image(trackImage,0,-displayHeight*4,displayWidth,displayHeight*5);
+      var index = 0;
+      var x = 175;
+      var y;
+      for(var plr in allPlayers)
+      {
+        index = index + 1;
+        x = x + 200;
+        y = displayHeight - allPlayers[plr].distance;
+        teams[index-1].x = x;
+        teams[index-1].y = y;
+        if (index === team.index)
+        {
+          teams[index - 1].shapeColor = "red";
+          camera.position.x = displayWidth/2;
+          camera.position.y = cars[index-1].y
+          stroke(10);
+          fill("red");
+          ellipse(x,y,60,60);
+        }
+      }
+    }
